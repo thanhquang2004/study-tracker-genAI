@@ -1,0 +1,71 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id         String              @id @default(auto()) @map("_id") @db.ObjectId
+  email      String              @unique
+  password   String
+  name       String
+  dob        DateTime
+  age        Int
+  gender     String
+  location   String
+  occupation String
+  updatedAt  DateTime            @updatedAt
+  createdAt  DateTime            @default(now())
+  info       InformationForGen[]
+  Roadmap    Roadmap[]
+}
+
+model InformationForGen {
+  id          String   @id @default(auto()) @map("_id") @db.ObjectId
+  userId      String   @db.ObjectId
+  information String
+  updatedAt   DateTime @updatedAt
+  createdAt   DateTime @default(now())
+
+  user User @relation(fields: [userId], references: [id])
+}
+
+model Roadmap {
+  id        String   @id @default(auto()) @map("_id") @db.ObjectId
+  userId    String   @db.ObjectId
+  title     String
+  stages    Stage[]
+  updatedAt DateTime @updatedAt
+  createdAt DateTime @default(now())
+
+  user User @relation(fields: [userId], references: [id])
+}
+
+type Stage {
+  Name      String
+  Timeframe String
+  Tasks     Task[]
+}
+
+type Task {
+  Name        String
+  Description String
+  Time        String
+  Subtasks    Subtask[]
+}
+
+type Subtask {
+  Name        String
+  Description String
+  Resources   String[]
+  Time        String
+}
