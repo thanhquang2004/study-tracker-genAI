@@ -4,6 +4,7 @@ import { GenerateQuesDto } from './dto/generate-ques.dto';
 import { JwtAuthGuard } from 'src/auth/guards/jwt-auth.guard';
 import { CurrentUser } from 'src/auth/decorator/current-user.decorator';
 import { User } from '@prisma/client';
+import { GenerateQuizDto } from './dto/generateQuiz.dto';
 
 @Controller('gemini')
 export class GeminiController {
@@ -35,6 +36,11 @@ export class GeminiController {
       generateQuesDto.info,
       'title',
     );
+  }
+
+  @Post('quiz')
+  async generateQuiz(@Body() generateQuizDto: GenerateQuizDto) {
+    return this.geminiService.generateQuiz(generateQuizDto);
   }
 
   @Get('roadmap/:id')

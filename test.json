@@ -1,1 +1,226 @@
-{"nextQuestion": "What specific types of public speaking are you interested in or do you need to develop skills for?", "answer": "Type: ", "exampleAnswer": [{"content": "Presentations at work"}, {"content": "Public speeches"}, {"content": "Toastmastering"}], "status": "false"}
+{
+  "Roadmap": {
+    "Stages": [
+      {
+        "Name": "AWS Fundamentals",
+        "Timeframe": "2 months",
+        "Tasks": [
+          {
+            "Name": "AWS Concepts and Services",
+            "Description": "Gain a foundational understanding of AWS core concepts, key services, and the AWS cloud architecture.",
+            "Time": "1 month",
+            "Subtasks": [
+              {
+                "Name": "Introduction to AWS",
+                "Description": "Learn about the history, benefits, and use cases of AWS.",
+                "Resources": [
+                  "https://aws.amazon.com/what-is-aws/",
+                  "https://www.youtube.com/watch?v=Y-d3cV4T64c"
+                ],
+                "Time": "1 week",
+                "Quiz": []
+              },
+              {
+                "Name": "AWS Global Infrastructure",
+                "Description": "Explore the AWS global infrastructure, regions, and availability zones.",
+                "Resources": [
+                  "https://aws.amazon.com/about-aws/global-infrastructure/"
+                ],
+                "Time": "1 week",
+                "Quiz": []
+              },
+              {
+                "Name": "Compute Services (EC2, Lambda)",
+                "Description": "Understand the different types of compute services available on AWS, including EC2 and Lambda.",
+                "Resources": [
+                  "https://aws.amazon.com/ec2/",
+                  "https://aws.amazon.com/lambda/"
+                ],
+                "Time": "1 week",
+                "Quiz": []
+              },
+              {
+                "Name": "Storage Services (S3, EBS)",
+                "Description": "Learn about AWS storage options, including S3 for object storage and EBS for block storage.",
+                "Resources": [
+                  "https://aws.amazon.com/s3/",
+                  "https://aws.amazon.com/ebs/"
+                ],
+                "Time": "1 week",
+                "Quiz": []
+              },
+              {
+                "Name": "Networking Services (VPC, Route 53)",
+                "Description": "Explore the AWS networking model, including VPCs, subnets, and Route 53 for DNS.",
+                "Resources": [
+                  "https://aws.amazon.com/vpc/",
+                  "https://aws.amazon.com/route-53/"
+                ],
+                "Time": "1 week",
+                "Quiz": []
+              }
+            ]
+          },
+          {
+            "Name": "Hands-on Practice with AWS",
+            "Description": "Apply your knowledge by working through practical exercises and building simple AWS projects.",
+            "Time": "1 month",
+            "Subtasks": [
+              {
+                "Name": "Create an AWS Account",
+                "Description": "Sign up for a free AWS account and familiarize yourself with the AWS Management Console.",
+                "Resources": ["https://aws.amazon.com/free/"],
+                "Time": "1 week",
+                "Quiz": []
+              },
+              {
+                "Name": "Launch an EC2 Instance",
+                "Description": "Learn how to launch and configure a virtual machine (EC2 instance) on AWS.",
+                "Resources": [
+                  "https://aws.amazon.com/getting-started/tutorials/launch-an-ec2-instance/"
+                ],
+                "Time": "1 week",
+                "Quiz": []
+              },
+              {
+                "Name": "Deploy a Simple Web Application",
+                "Description": "Build a basic web application using AWS services and deploy it to AWS.",
+                "Resources": [
+                  "https://aws.amazon.com/getting-started/tutorials/deploy-a-web-application/"
+                ],
+                "Time": "2 weeks",
+                "Quiz": []
+              },
+              {
+                "Name": "Explore AWS Console and CLI",
+                "Description": "Gain proficiency in using the AWS Management Console and the AWS Command Line Interface (CLI).",
+                "Resources": [
+                  "https://aws.amazon.com/console/",
+                  "https://aws.amazon.com/cli/"
+                ],
+                "Time": "1 week",
+                "Quiz": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "Name": "DevOps with AWS",
+        "Timeframe": "3 months",
+        "Tasks": [
+          {
+            "Name": "Infrastructure as Code (IaC)",
+            "Description": "Learn about Infrastructure as Code (IaC) and its benefits. Master tools like CloudFormation and Terraform for automated infrastructure provisioning.",
+            "Time": "1.5 months",
+            "Subtasks": [
+              {
+                "Name": "Introduction to IaC",
+                "Description": "Understand the principles of Infrastructure as Code (IaC) and its advantages.",
+                "Resources": [
+                  "https://aws.amazon.com/solutions/infrastructure-as-code/"
+                ],
+                "Time": "1 week",
+                "Quiz": []
+              },
+              {
+                "Name": "AWS CloudFormation",
+                "Description": "Learn how to use AWS CloudFormation to define and manage your AWS resources using templates.",
+                "Resources": ["https://aws.amazon.com/cloudformation/"],
+                "Time": "3 weeks",
+                "Quiz": []
+              },
+              {
+                "Name": "Terraform for AWS",
+                "Description": "Explore Terraform, an open-source tool, to manage AWS infrastructure using declarative configuration.",
+                "Resources": [
+                  "https://www.terraform.io/docs/providers/aws/index.html"
+                ],
+                "Time": "3 weeks",
+                "Quiz": []
+              },
+              {
+                "Name": "Practical IaC Projects",
+                "Description": "Build real-world IaC projects using either CloudFormation or Terraform.",
+                "Resources": [
+                  "https://github.com/hashicorp/terraform-aws-examples"
+                ],
+                "Time": "2 weeks",
+                "Quiz": []
+              }
+            ]
+          },
+          {
+            "Name": "CI/CD Pipelines with AWS",
+            "Description": "Learn to create Continuous Integration/Continuous Deployment (CI/CD) pipelines using AWS services like CodePipeline and CodeBuild.",
+            "Time": "1 month",
+            "Subtasks": [
+              {
+                "Name": "AWS CodePipeline",
+                "Description": "Learn about AWS CodePipeline and its role in automating the release process.",
+                "Resources": ["https://aws.amazon.com/codepipeline/"],
+                "Time": "2 weeks",
+                "Quiz": []
+              },
+              {
+                "Name": "AWS CodeBuild",
+                "Description": "Understand how AWS CodeBuild works to build, test, and package your applications.",
+                "Resources": ["https://aws.amazon.com/codebuild/"],
+                "Time": "2 weeks",
+                "Quiz": []
+              },
+              {
+                "Name": "Building CI/CD Pipelines",
+                "Description": "Practice creating CI/CD pipelines using AWS CodePipeline and CodeBuild.",
+                "Resources": [
+                  "https://aws.amazon.com/getting-started/tutorials/build-a-ci-cd-pipeline/"
+                ],
+                "Time": "2 weeks",
+                "Quiz": []
+              },
+              {
+                "Name": "Implementing CI/CD best practices",
+                "Description": "Learn about best practices for designing and implementing efficient and secure CI/CD pipelines.",
+                "Resources": [
+                  "https://aws.amazon.com/blogs/devops/best-practices-for-building-continuous-delivery-pipelines-on-aws/"
+                ],
+                "Time": "1 week",
+                "Quiz": []
+              }
+            ]
+          },
+          {
+            "Name": "Monitoring and Logging",
+            "Description": "Learn how to monitor and log your AWS applications and infrastructure using services like CloudWatch and CloudTrail.",
+            "Time": "0.5 months",
+            "Subtasks": [
+              {
+                "Name": "AWS CloudWatch",
+                "Description": "Explore AWS CloudWatch for monitoring your applications and infrastructure.",
+                "Resources": ["https://aws.amazon.com/cloudwatch/"],
+                "Time": "2 weeks",
+                "Quiz": []
+              },
+              {
+                "Name": "AWS CloudTrail",
+                "Description": "Understand how to use CloudTrail to audit and track activity in your AWS environment.",
+                "Resources": ["https://aws.amazon.com/cloudtrail/"],
+                "Time": "1 week",
+                "Quiz": []
+              },
+              {
+                "Name": "Setting up Monitoring and Logging",
+                "Description": "Configure CloudWatch and CloudTrail to monitor and log your AWS resources.",
+                "Resources": [
+                  "https://aws.amazon.com/getting-started/tutorials/monitor-your-applications/"
+                ],
+                "Time": "2 weeks",
+                "Quiz": []
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
