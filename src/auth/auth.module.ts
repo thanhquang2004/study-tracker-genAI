@@ -7,6 +7,8 @@ import { PrismaService } from 'src/prisma/prisma.service';
 import { LocalStrategy } from './strategies/local.strategy';
 import { UserModule } from 'src/user/user.module';
 import { JwtStrategy } from './strategies/jwt.strategy';
+import { GoogleStrategy } from './strategies/google.strategy';
+import { SessionSerializer } from './strategies/Serializer';
 
 @Module({
   imports: [
@@ -28,6 +30,8 @@ import { JwtStrategy } from './strategies/jwt.strategy';
     ConfigService,
     LocalStrategy,
     JwtStrategy,
+    GoogleStrategy,
+    SessionSerializer,
   ],
 })
 export class AuthModule {}

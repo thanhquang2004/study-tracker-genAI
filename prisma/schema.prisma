@@ -15,14 +15,15 @@ datasource db {
 
 model User {
   id         String              @id @default(auto()) @map("_id") @db.ObjectId
+  googleId   String?
   email      String              @unique
-  password   String
+  password   String?
   name       String
-  dob        DateTime
-  age        Int
-  gender     String
-  location   String
-  occupation String
+  dob        DateTime?
+  age        Int?
+  gender     String?
+  location   String?
+  occupation String?
   updatedAt  DateTime            @updatedAt
   createdAt  DateTime            @default(now())
   info       InformationForGen[]
@@ -66,6 +67,13 @@ type Task {
 type Subtask {
   Name        String
   Description String
+  Quiz        Quiz[]
   Resources   String[]
   Time        String
+}
+
+type Quiz {
+  Question String
+  Options  String[]
+  Answer   String
 }

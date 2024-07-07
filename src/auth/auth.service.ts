@@ -5,6 +5,7 @@ import * as bcrypt from 'bcrypt';
 import { JwtService } from '@nestjs/jwt';
 import { ConfigService } from '@nestjs/config';
 import { User } from '@prisma/client';
+import { UserDetail } from './type/userDetail';
 
 @Injectable()
 export class AuthService {
@@ -105,5 +106,31 @@ export class AuthService {
       expiresIn: '10m',
       secret: this.configService.get('JWT_SECRET'),
     });
+  }
+
+  async googleLogin(detail: UserDetail) {
+    const user = await this.prismaService.user.findUnique({
+      where: {
+        email: detail.email,
+      },
+    });
+    if (user) return user;
+
+    if (!user) {
+      return await this.prismaService.user.create({
+        data: {
+          email: detail.email,
+          name: detail.fullName,
+        },
+      });
+    }
+
+    return user;
+  }
+
+  async logout(user: any) {
+    return {
+      message: 'Logged out successfully',
+    };
   }
 }
